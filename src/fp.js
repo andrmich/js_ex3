@@ -21,7 +21,12 @@ export const findAllPlumbers = () => {
 // napisz funkcję która zwróci tablicę w podanej postaci: ["Evan gra rolę Boxera", "Vince gra rolę Plumbera", ...]
 // Użyj do tego instrukcji map.
 //
-export const formatMovieCharactersArray = () => "TODO";
+export const formatMovieCharactersArray = () => {
+  let result = movieChars.sort().map(element => {
+    return `${element.name} gra rolę ${element.role}a`
+  })
+  return result
+};
 
 //
 // Napisz funkcję która zliczy wszystkich Plumberów, Boxerów, Redactorów oraz Super-manów. A wynik poda w postaci:
