@@ -10,7 +10,11 @@ const movieChars = [
   { name: "Tim", role: "Super-man" }
 ];
 
-export const findAllPlumbers = () => "TODO";
+export const findAllPlumbers = () => {
+  let plumbers = movieChars.filter(movieChars => movieChars.role === "Plumber");
+  let names = plumbers.map(function(el) {return el.name})
+  return names.sort();
+};
 
 //
 // Na podstawie wyżej utworzonej tablicy postaci,
