@@ -45,7 +45,6 @@ let tryArr = Object.keys(group).forEach(key => {
         }
     let result = []
     result.push(key, JSON.stringify(obj) )
-    console.log(result)
     return result;}
       ) 
 
