@@ -33,20 +33,19 @@ export const formatMovieCharactersArray = () => {
 // [["Plumber", { num_of_chars: 2, names: ["July", "Vince"] }], ...]
 // Użyj do tego instrukcji reduce oraz funkcji pomocniczych. Postaraj się nie rozbudowywać mocno kodu!
 //
-et group = movieChars.reduce((r,a) => {
+export const transformMovieArray = () => {
+let group = movieChars.reduce((r,a) => {
   r[a.role] = [...r[a.role] || [], a.name];
   return r;
   }, {});
-    
-let tryArr = Object.keys(group).forEach(key => { 
+
+let result = []
+Object.keys(group).forEach(key => { 
     let obj = {
         num_of_chars: group[key].length , 
         names: Object.values(group[key])
         }
-    let result = []
-    result.push(key, JSON.stringify(obj) )
-    return result;}
-      ) 
+    result.push(key, JSON.stringify(obj)) })
+return result;}
 
-export const transformMovieArray = () => tryArr
 // still not passing test because there'are " "
